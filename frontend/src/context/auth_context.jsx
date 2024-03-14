@@ -18,7 +18,7 @@ export const AuthContextProvider = ({ children }) => {
   const [onlineUsers, setOnlineUsers] = useState([]);
   useEffect(() => {
     if (authUser) {
-      const socket = io("http://localhost:8000", {
+      const socket = io("https://chat-app-0ie9.onrender.com", {
         transports : ['websocket'] ,
         query: {
           userId: authUser._id,
